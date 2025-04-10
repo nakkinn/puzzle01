@@ -8,9 +8,25 @@ let angle0 = 0;
 let angle1 = 0;
 
 
+
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
+
+
+const btn_shuffle = document.getElementById("btn_shuffle");
+btn_shuffle.addEventListener("click", function() {
+    let code1 = new Array(10);
+    for(let i=0; i<code1.length; i++){
+        code1[i] = [Math.round(Math.random()*2), Math.round(Math.random()*11)];
+    }
+    for(let i=0; i<code1.length; i++){
+        if(code1[i][0]==0) f1(code1[i][1]);
+        if(code1[i][0]==1) f2(code1[i][1]);
+        if(code1[i][0]==2) f3(code1[i][1]);
+    }
+});
+
 
 
 function setup(){
@@ -62,7 +78,6 @@ function setup(){
 
     balls_init = JSON.parse(JSON.stringify(balls));
 
-    console.log( r1*0.026)
 
 }
 
