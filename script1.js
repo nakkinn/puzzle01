@@ -156,12 +156,11 @@ function draw(){
         circle(balls[i].x, balls[i].y, r1*0.26);
     }
 
-    
-    text(mouseX + ", " + mouseY, 40, 50);
+
 }
 
 
-function mousePressed(){
+function touchStarted(){
 
     for(let i=0; i<balls.length; i++){
         balls[i].angle = undefined;
@@ -196,7 +195,7 @@ function mousePressed(){
 }
 
 
-function mouseDragged(){
+function touchMoved()(){
 
     if(mode1==1){
         angle1 = atan2(mouseY-y1, mouseX-x1);
@@ -234,7 +233,7 @@ function mouseDragged(){
 
 
 
-function mouseReleased(){
+function touchEnded()(){
     if(mode1!=-1){
         let a1 = Math.round( (angle1 + 2*PI - angle0) % (2*PI) * 12 / (2*PI) ) % 12;
         if(mode1==1)   f1(a1);
