@@ -32,7 +32,7 @@ btn_shuffle.addEventListener("click", function() {
 function setup(){
     createCanvas(windowWidth, windowWidth);
 
-    r1 = width / 6.2
+    r1 = Math.min(width,height) / 6.2;
     r2 = r1 * sqrt(3);
 
     x1 = width / 2 + r1 * cos(PI/6);
