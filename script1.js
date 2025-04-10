@@ -157,7 +157,7 @@ function draw(){
     }
 
     
-
+    text(mouseX + ", " + mouseY, 40, 50);
 }
 
 
