@@ -195,7 +195,7 @@ function touchStarted(){
 }
 
 
-function touchMoved()(){
+function touchMoved(){
 
     if(mode1==1){
         angle1 = atan2(mouseY-y1, mouseX-x1);
@@ -233,7 +233,7 @@ function touchMoved()(){
 
 
 
-function touchEnded()(){
+function touchEnded(){
     if(mode1!=-1){
         let a1 = Math.round( (angle1 + 2*PI - angle0) % (2*PI) * 12 / (2*PI) ) % 12;
         if(mode1==1)   f1(a1);
